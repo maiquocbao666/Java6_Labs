@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Nguyên Văn Tèo",
+    "gender": true,
+    "grade": 7.5,
+    "contact": {
+      "email": "teonv@gmail.com",
+      "phone": "0913745789"
+    },
+    "subjects": ["WEB205", "COM108"]
+  },
+  {
+    "name": "Trần Thị Thu Hương",
+    "gender": false,
+    "grade": 5.5,
+    "contact": {
+      "email": "teonv@gmail.com",
+      "phone": "0913745789"
+    },
+    "subjects": ["WEB205", "COM108"]
+  },
+  {
+    "name": "Phạm Đức Cường",
+    "gender": true,
+    "grade": 9.5,
+    "contact": {
+      "email": "teonv@gmail.com",
+      "phone": "0913745789",
+      "address": "77B/B1 Nguyễn Kiệm, F.4, Q.Phú Nhuận"
+    },
+    "subjects": ["WEB205", "COM108"]
+  },
+  {
+    "name": "Lê Thị Mỹ Hồng",
+    "gender": false,
+    "grade": 6.5,
+    "contact": {
+      "email": "teonv@gmail.com",
+      "phone": "0913745789"
+    },
+    "subjects": ["WEB205", "COM108"]
+  },
+  {
+    "name": "Đoàn Thị Kim Ty",
+    "gender": false,
+    "grade": 8.0,
+    "contact": {
+      "email": "teonv@gmail.com",
+      "phone": "0913745789"
+    },
+    "subjects": ["WEB205", "COM108"]
+  }
+]

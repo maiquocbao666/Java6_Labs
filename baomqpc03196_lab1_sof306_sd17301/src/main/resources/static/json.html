@@ -1,0 +1,38 @@
+<!-- Bài 3 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruh</title>
+  </head>
+  <body>
+    <script>
+      var sv = {
+        name: "Nguyễn Văn Tèo",
+        gender: true,
+        marks: 7.5,
+        contact: {
+          email: "teonv@gmail.com",
+          phone: "0913745789",
+        },
+        subject: ["WEB205", "COM108"],
+      };
+      //Xuất đối tượng
+      console.log(sv);
+      //Truy xuất thuộc tính
+      sv.name = sv["name"].toUpperCase();
+      console.log(sv.name, sv.contact.email, sv.subject[0]);
+      // Duyệt đối tượng theo key
+      for (var key in sv) {
+        console.log(key, sv[key]);
+      }
+      //Chuyển đổi đối tượng JSON sang chuỗi
+      var text = JSON.stringify(sv);
+      console.log(text);
+      // Chuyển đổi chuỗi sang đối tượng JSON
+      var obj = JSON.parse(text);
+      console.log(obj, obj.name);
+    </script>
+  </body>
+</html>
