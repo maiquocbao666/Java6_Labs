@@ -1,0 +1,20 @@
+<!-- Bài 2 -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img th:src="@{/images/logoFPoly.png}" style="height: 80" />
+    <nav th:replace="~{/layout/menu.html}"></nav>
+    <h1 th:text="${message}"></h1>
+    <ul th:object="${sv}">
+      <li th:text="${sv.name}"></li>
+      <li th:text="${sv.marks}"></li>
+      <li th:text="${sv.contact.email}"></li>
+      <!-- <li th:text="*{contact.email}"></li> -->
+    </ul>
+  </body>
+</html>

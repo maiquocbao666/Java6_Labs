@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Thymelaf Flow Control Attributes</h3>
+    <ul>
+      <li th:each="sv, state : ${dssv}">
+        <a th:href="@{|/student/list?index=${state.index}|}">[[${sv.name}]]</a>
+      </li>
+    </ul>
+    <h3>Student Details</h3>
+    <ul th:object="${sv}">
+      <li><i>Name: </i><b th:text="${sv.name}"></b></li>
+      <li><i>Gender: </i><b th:text="${sv.marks}"></b></li>
+      <li><i>Marks: </i><b th:text="${sv.gender} ?  'Male':'Female' "></b></li>
+      <li><i>Email: </i><b th:text="${sv.contact.email}"></b></li>
+      <li>
+        <i>Subjects:</i>
+        <ul>
+          <li th:each="subject : ${sv.subjects}">
+            <b th:text="${subject}"></b>
+          </li>
+        </ul>
+      </li>
+      <li th:switch="*{#arrays.length(subjects)}">
+        <i>Time: </i>
+        <b th:case="1">Mới vào</b>
+        <b th:case="2">Đang học</b>
+        <b th:case="*">Sắp ra trường</b>
+      </li>
+      <li th:if="${sv.marks} > 9">
+        <i>
+          Title: <i><b>Golden Bee</b></i>
+        </i>
+      </li>
+    </ul>
+  </body>
+</html>

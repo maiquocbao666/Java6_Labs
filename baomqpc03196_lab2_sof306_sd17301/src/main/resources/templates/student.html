@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a th:href="@{|/student?index=${index-1}|}">Previous</a>
+    <a th:href="@{|/student?index=${index+1}|}">Next</a>
+    <ul th:object="${sv}">
+      <li th:text="${sv.name}"></li>
+      <li th:text="${sv.marks}"></li>
+      <li th:text="${sv.contact.email}"></li>
+    </ul>
+  </body>
+</html>
