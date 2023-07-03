@@ -1,0 +1,20 @@
+<!-- Bài 1 -->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to Thymeleaf</h1>
+    <ul>
+      <li th:text="${message}"></li>
+      <li th:utext="${message}"></li>
+    </ul>
+    <ul>
+      <li>[[${message}]]</li>
+      <li>[[${message}]]</li>
+    </ul>
+  </body>
+</html>
