@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org" th:replace="~{/layout/layout.html :: dynamic(~{::body})}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Result</h3>
+    <ul th:object="${sv}">
+        <li>Email Address: <i th:text="${sv.email}"></i></li>
+        <li>Fullname: <i th:text="${sv.fullname}"></i></li>
+        <li>Average Marks: <i th:text="${sv.marks}"></i></li>
+        <li>Gender: <i th:text="${sv.gender} ? 'Male':'Female' "></i></li>
+        <li>Country: <i th:text="${sv.country}"></i></li>
+    </ul>
+</body>
+
+</html>

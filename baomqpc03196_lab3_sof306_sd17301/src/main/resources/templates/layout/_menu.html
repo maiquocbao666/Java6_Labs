@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav th:fragment="navbar">
+        <a th:href="@{/home/index}" th:text="#{nav.home}">Home</a> ::
+        <a th:href="@{/home/about}" th:text="#{nav.about}">About Us</a> ::
+        <a th:href="@{/student/form}" th:text="#{nav.student}">Student</a> ::
+        <a th:href="@{/validation/form}" th:text="#{nav.validate}">Validation</a> ::
+        [<a href="?lang=vi">Tiếng Việt</a>]
+        [<a href="?lang=en">Tiếng Anh</a>]
+    </nav>
+</body>
+
+</html>
