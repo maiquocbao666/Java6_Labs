@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form th:object="${form}" method="post">
+        <input th:field="*{email}" placeholder="Email Address?"> <br>
+        <input th:field="*{fullname}" placeholder="Full Name?"> <br>
+        <input th:field="*{marks}" placeholder="Average Marks?"> <br>
+        <input th:field="*{gender}" value="true" type="radio"> Male
+        <input th:field="*{gender}" value="false" type="radio"> Female <br>
+        <select th:field="*{country}">
+            <option value="VN">Việt Nam</option>
+            <option value="US">United States</option>
+        </select> <br>
+        <hr>
+        <button th:formaction="@{/student/create}">Create</button>
+        <button th:formaction="@{|/student/update/${key}|}">Update</button>
+        <button th:formaction="@{|/student/delete/${key}|}">Delete</button>
+        <button th:formaction="@{/student/index}">Reset</button>
+    </form>
+</body>
+
+</html>
