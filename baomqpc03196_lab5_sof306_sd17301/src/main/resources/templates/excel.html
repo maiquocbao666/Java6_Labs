@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import excel</title>
+    <!-- Thư viện angular js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <!-- Thư viện excel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+    <!-- Thư viên file saver -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+    <!-- onchange="angular.element(this).scope().import(this.files)" -->
+    <input type="file" id="fileInput" ng-model="selectedFile">
+    <button ng-click="import()">Lưu dữ liệu từ excel vào cơ sở dữ liệu</button>
+    <button ng-click="export()">Xuất file excel</button>
+    <script src="/baomqpc03196_lab5_sof306_sd17301\src\main\resources\static\excel-ctrl.js"></script>
+
+</body>
+
+</html>
