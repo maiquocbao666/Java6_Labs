@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+<body ng-app="app" ng-controller="ctrl">
+
+    <h3>Error Processing</h3>
+    <script>
+        const app = angular.module("app", []);
+        app.controller("ctrl", function ($scope, $http) {
+            let url = "http://localhost:8080/rest/categories";
+            $http.get(url).then(resp => {
+                console.log("Success", resp);
+            }).catch(error => {
+                console.log("Error", error);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
